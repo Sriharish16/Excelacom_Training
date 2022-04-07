@@ -1,6 +1,7 @@
 package com.model;
 
 import com.example.model.Student;
+import com.training.services;
 
 public class Application {
 	public static void main(String[] args) {
@@ -27,3 +28,4 @@ public class Application {
 	}
 	Student shyam=new Student(490,"Shyam", 89, "Mech");
 	System.out.println(shyam.getRollNumber());
+}
