@@ -1,8 +1,9 @@
 package com.training.services;
+import java.util.*;
 
 public class Application {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 
 		
 //		Student ram= new Student(1010,"Sriharish",-99);
@@ -25,7 +26,19 @@ public class Application {
 		ExceptionalHandling exHandling= new ExceptionalHandling();
 //		exHandling.usingArrayIndexException(args);
 //		exHandling.usingNumberFormatException("Dog");
-		exHandling.usingFinallyBlock();
-	}}
+		System.out.println(exHandling.usingFinallyBlock());
+		
+		//Since we are using try with resource - Scanner will be closed
+		try(Scanner scan = new Scanner(System.in)){
+			System.out.println("Enter the Number:");
+			int num =scan.nextInt();
+			System.out.println(num);
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	
+	}
+}
 
 

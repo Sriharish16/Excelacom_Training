@@ -26,16 +26,21 @@ public class ExceptionalHandling {
 			System.out.println(age);
 		}
 		
-		public void usingFinallyBlock() {
-			int denominator=0;
+		public String usingFinallyBlock() throws Exception {
+			int denominator=4;
 			try {
 				System.out.println(4/denominator);
 				
 				
 			}catch(ArithmeticException e) {
 				System.out.println("Denominator Should not be zero");
+			//	return "welcome";
+				throw new Exception();
+			}
+			finally {System.out.println("Inside Finally==");
 			}
 			System.out.println("Thanks bye bye");
+			return "thanks";
 		}
 		
 		
