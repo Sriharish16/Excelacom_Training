@@ -44,21 +44,28 @@ public class Customer {
 
 
 	public void setEmail(String email) throws InvalidEmailException {
-		 email.contains("@.com.org.in");
-		 try {
-			 ();
-		 }catch{
-			 InvalidEmailException e;
-			 e.printStackTrace();
+		
+		
 		this.email = email;
 	}
 
-	}	
+	public boolean checkEmail(String mail)throws InvalidEmailException
+	{
+		if(checkEmail(mail))
+		{
+			this.email=email;
+			
+			
+		}
+	}
+	
 
 	private Exception InvalidEmailException() {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
+	
 
 
 	public Customer(int customerId, String customerName, int phoneNumber, String email) {
@@ -83,11 +90,5 @@ public class Customer {
 	}
 
 
-	public void getMessage() {
-		// TODO Auto-generated method stub
-		
-	} 
-	
-	
 	
 }

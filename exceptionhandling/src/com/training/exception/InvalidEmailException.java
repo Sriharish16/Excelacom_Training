@@ -6,6 +6,13 @@ public class InvalidEmailException extends Exception {
 	public String getMessage() {
 	
 		return super.getMessage();
+		
+		
+	}
+
+	public InvalidEmailException(String arg0) {
+		super(arg0);
+		// TODO Auto-generated constructor stub
 	}
 
 }
