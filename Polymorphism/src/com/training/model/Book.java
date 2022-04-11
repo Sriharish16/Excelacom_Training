@@ -1,6 +1,6 @@
 package com.training.model;
 
-public class Book {
+public class Book implements Comparable<Book>{
 
 	private int bookNumber;
 	private String bookName;
@@ -69,5 +69,13 @@ public class Book {
 				+ "]";
 	}
 	
+	public int compareTo(Book otherObj) {
+		if(otherObj.bookNumber<this.bookNumber) return -1;
+		if(otherObj.bookNumber>this.bookNumber)
+	 return 1;
 	
+		return 0;
+	}
+		//return otherObj.bookName.compareTo(this.bookName);
+		
 }
