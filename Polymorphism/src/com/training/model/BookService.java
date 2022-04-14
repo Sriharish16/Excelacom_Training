@@ -68,7 +68,7 @@ public class BookService implements CrudRepository {
 		
 	}
 
-	public List<Book> getBookGrtThan(int i) {
+	 List<Book> getBookGrtThan(int i) {
 		// TODO Auto-generated method stub
 		return null;
 	}

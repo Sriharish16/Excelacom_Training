@@ -93,7 +93,7 @@ public class Student implements Comparable<Student>{
 
 
 	
-	public int compareTo(Student otherObj) {
+public int compareTo(Student otherObj) {
 		// TODO Auto-generated method stub
 		return otherObj.firstName.compareTo(this.firstName);
 	}
