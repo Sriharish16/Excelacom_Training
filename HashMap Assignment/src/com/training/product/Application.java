@@ -28,10 +28,8 @@ public class Application {
 		list1.add(proObj2);
 		list1.add(proObj3);
 
-		Iterator<Product> i=list1.iterator();  
-        while(i.hasNext())  
-        {  
-        System.out.println(i.next());  
+		for(Product itr:list1) {
+			System.out.println(itr);
         
         
         	}

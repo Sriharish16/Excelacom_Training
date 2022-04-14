@@ -19,6 +19,9 @@ public class Application {
 		
 		CrudRepository service = new BookService();
 		
+		List<Book>bookList=((BookService)service).getBookGrtThan(400);
+		bookList.forEach(action);
+		
 		System.out.println("Is Added:"+service.add(java));
 		service.add(spring);
 		service.add(python);

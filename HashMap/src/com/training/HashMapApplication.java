@@ -7,11 +7,12 @@ public class HashMapApplication {
 
 	public static void main(String[] args) {
 		
+		HashMap<Integer, Student>map=new HashMap<>();
 		Student ram =new Student(101,"Anand",78);
 		Student shyam=new Student(102,"Basky",58);
 		Student mukesh=new Student(103,"mugesh",65);
 		
-		HashMap<Integer, Student>map=new HashMap<>();
+	
 		
 		
 		map.put(900, ram);
@@ -23,8 +24,8 @@ public class HashMapApplication {
 		System.out.println(map.get(902));
 		
 	//Using keyset method to get all keys together..	
-	Set<Integer>keys=map.keySet();	
-		
+		Set<Integer>keys=map.keySet();	
+	
 		for(Integer key:keys) {
 			
 			System.out.println(map.get(key));
