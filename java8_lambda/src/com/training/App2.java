@@ -1,4 +1,4 @@
-package java8_lambda;
+package com.training;
 
 import java.util.List;
 import java.util.function.*;
@@ -12,7 +12,9 @@ public class App2 {
 		List<String>names=Arrays.asList("India","Srilanka","Indonesia","Bhutan");
 		
 		Predicate<String>str=(value)->value.startsWith("S");
+		
 		Consumer<String>str1=(value1)->{if(str.test(value1)) {System.out.println(value1);}};
+		
 		names.forEach(str1);
 	//	System.out.println(str);
 		

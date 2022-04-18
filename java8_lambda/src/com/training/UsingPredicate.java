@@ -1,4 +1,4 @@
-package java8_lambda;
+package com.training;
 
 import java.util.*;
 import java.util.function.*;

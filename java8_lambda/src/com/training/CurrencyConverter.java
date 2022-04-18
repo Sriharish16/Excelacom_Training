@@ -1,4 +1,4 @@
-package java8_lambda;
+package com.training;
 
 public class CurrencyConverter implements Converter<Double, Double> {
 

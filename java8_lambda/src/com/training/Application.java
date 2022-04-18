@@ -1,7 +1,7 @@
-package java8_lambda;
+package com.training;
 
-import java8_lambda.CurrencyConverter;
-import java8_lambda.Converter;
+import com.training.Converter;
+import com.training.CurrencyConverter;
 
 public class Application {
 	
