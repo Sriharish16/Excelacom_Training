@@ -10,7 +10,7 @@ public class UsingPredicate {
 	public static void main(String[] args) {
 		
 		List<String>names=Arrays.asList("India","Srilanka","Indonesia","Bhutan");
-		
+		System.out.println(names);
 		
 	
 		

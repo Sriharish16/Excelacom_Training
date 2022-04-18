@@ -17,8 +17,7 @@ public class Converter {
 		
 		if(frm>1) {
 			response=amt*120;
-		
-			return response;
-		}
+				}
+		return response;
 	}
 }
