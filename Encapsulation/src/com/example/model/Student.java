@@ -28,7 +28,7 @@ public class Student {
 	public String getBranch() {
 		return Branch;
 	}
-	private void setBranch(String branch) {
+	public void setBranch(String branch) {
 		this.Branch = branch;
 	
 	}

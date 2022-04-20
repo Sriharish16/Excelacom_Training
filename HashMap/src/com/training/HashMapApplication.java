@@ -8,6 +8,7 @@ public class HashMapApplication {
 	public static void main(String[] args) {
 		
 		HashMap<Integer, Student>map=new HashMap<>();
+		
 		Student ram =new Student(101,"Anand",78);
 		Student shyam=new Student(102,"Basky",58);
 		Student mukesh=new Student(103,"mugesh",65);
