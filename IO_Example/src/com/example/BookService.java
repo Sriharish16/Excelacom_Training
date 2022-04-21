@@ -2,31 +2,64 @@ package com.example;
 
 import java.io.*;
 import java.util.*;
-
-
-public class BookService {
+public class BookService{
 	
-	public boolean writeToFile(File file, Book book) {
+	public Object readFromStream(File file) {
 		
-		boolean result=false;
+		Object obj = null;
 		
-		try(PrintWriter writer =  new PrintWriter(new FileWriter(file),true);) {
+		try(ObjectInputStream inStream=
+				new ObjectInputStream(new FileInputStream(file))) {
 			
-			writer.println(book);
+			obj=inStream.readObject();
 			
-			return true;
-		}
+		} catch (IOException | ClassNotFoundException e) {
 			
-			catch (IOException e) {
+			e.printStackTrace();		}
+	
+		return obj;
 		
-
+	}
+	public boolean writeToStream(File file, Book book) {
+		
+		boolean result =false;
+		
+		try(ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(file))){
+			
+	outputStream.writeObject(book);	
+	
+	result=true;
+	
+		}catch (IOException e) {
+			
 			e.printStackTrace();
 		}
-		
 		return result;
-		
+	}
+
+//public class BookService {
+//	
+//	public boolean writeToFile(File file, Book book) {
+//		
+//		boolean result=false;
+//		
+//		try(PrintWriter writer =  new PrintWriter(new FileWriter(file),true);) {
+//			
+//			writer.println(book);
+//			
+//			return true;
+//		}
+//			
+//			catch (IOException e) {
+//		
+//
+//			e.printStackTrace();
+//		}
+//		
+//		return result;
+//		
 	
-}
+
 	public List<Book>readFromFile(File file){
 		
 		List<Book>bookList= new ArrayList<Book>();

@@ -1,6 +1,15 @@
 package com.example;
 
-public class Book implements Comparable<Book> {
+import java.io.Serializable;
+
+public class Book implements Comparable<Book> , Serializable{
+	
+	private int bookNumber;
+	private String bookName;
+	private String author;
+	private double price;
+	private double discount;
+	
 	
 	public Book(int bookNumber, String bookName, String author, double price) {
 		super();
@@ -8,15 +17,27 @@ public class Book implements Comparable<Book> {
 		this.bookName = bookName;
 		this.author = author;
 		this.price = price;
+		
 	}
 	public Book() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	private int bookNumber;
-	private String bookName;
-	private String author;
-	private double price;
+	
+	
+	
+	
+	
+	public double getDiscount() {
+		return discount;
+	}
+	public void setDiscount(double discount) {
+		this.discount = discount;
+	}
+	public Book(double discount) {
+		super();
+		this.discount = discount;
+	}
 	public int getBookNumber() {
 		return bookNumber;
 	}
@@ -62,6 +83,8 @@ public class Book implements Comparable<Book> {
 		result = prime * result + ((bookName == null) ? 0 : bookName.hashCode());
 		result = prime * result + bookNumber;
 		long temp;
+		temp = Double.doubleToLongBits(discount);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
 		temp = Double.doubleToLongBits(price);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
 		return result;
@@ -87,10 +110,14 @@ public class Book implements Comparable<Book> {
 			return false;
 		if (bookNumber != other.bookNumber)
 			return false;
+		if (Double.doubleToLongBits(discount) != Double.doubleToLongBits(other.discount))
+			return false;
 		if (Double.doubleToLongBits(price) != Double.doubleToLongBits(other.price))
 			return false;
 		return true;
 	}
+	
+	
 	
 	
 	
