@@ -33,7 +33,7 @@ service.add(python);
 
 
 //List<Book> bookList=service.findAll();
-List<String>nameList=((BookService)service).getBookNames();
+List<String>nameList=((BookService) service).getBookNames();
 nameList.forEach(System.out::println);
 System.out.println("===================================================================");
 System.out.println("Greater Than");
