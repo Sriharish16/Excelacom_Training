@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.entity.Product;
+//import com.example.entity.Product;
 
 public class MemberRepositry implements CrudRespositry<Member> {
 	
@@ -24,7 +24,7 @@ public class MemberRepositry implements CrudRespositry<Member> {
 	public List<Member> findAll() {
 List<Member>productList= new ArrayList<Member>();
 		
-		String sql= "select*from sri_product";
+		String sql= "select*from sri_member1";
 		
 		try(PreparedStatement pstmt=con.prepareStatement(sql)){
 			
@@ -50,7 +50,8 @@ List<Member>productList= new ArrayList<Member>();
 				
 				productList.add(mem);
 			
-		}} catch (SQLException e) {
+		}
+			} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
