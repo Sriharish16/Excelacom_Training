@@ -1,9 +1,12 @@
-package com.training;
+package com.training.dao;
 
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+
+import com.training.CrudRespositry;
+import com.training.Member;
 
 //import com.example.entity.Product;
 
@@ -14,6 +17,7 @@ public class MemberRepositry implements CrudRespositry<Member> {
 	public MemberRepositry(Connection con) {
 		super();
 		// TODO Auto-generated constructor stub
+		this.con=con;
 	}
 
 	public int add(Member obj) {
@@ -22,7 +26,7 @@ public class MemberRepositry implements CrudRespositry<Member> {
 	}
 
 	public List<Member> findAll() {
-List<Member>productList= new ArrayList<Member>();
+List<Member>memberList= new ArrayList<Member>();
 		
 		String sql= "select*from sri_member1";
 		
@@ -48,14 +52,14 @@ List<Member>productList= new ArrayList<Member>();
 				
 				Member mem = new Member(memberId, memberName, memberAddress,accountOpenDate,memberShipType,feesPaid,maxBookAllowed,penaltyAmount);
 				
-				productList.add(mem);
+				memberList.add(mem);
 			
 		}
 			} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return null;
+		return memberList;
 	}
 
 	public int remove(int id) {
@@ -72,5 +76,7 @@ List<Member>productList= new ArrayList<Member>();
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
+	
 
 }
