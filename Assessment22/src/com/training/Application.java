@@ -45,9 +45,6 @@ System.out.println(searchValue+"Occur:="+list+"times");
 		findCount(pop,"USA");
 		findCount(pop,"Nepal");
 		
-		
-		
-		
 		countryList(pop, "USA");
 		countryList(pop,"India");
 		countryList(pop,"Nepal");
