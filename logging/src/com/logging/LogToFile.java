@@ -22,6 +22,10 @@ public class LogToFile {
 		catch(IOException e) {
 			
 			log.warning(e.getMessage());	
-			}
+
+		}
 log.addHandler(handler);
-}}
+
+	}
+	
+}

@@ -37,6 +37,15 @@ try {
 //	else
 //	System.out.println("Value not found");
 	
+   Product kathli = new Product(221,"htry kathyhrli",5550.00);
+   Product jamun= new Product(210,"Jamun", 600.00);
+   
+   service.usingTxn(kathli, jamun);
+   
+   
+   
+   
+   
 } catch (SQLException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();

@@ -7,7 +7,7 @@ public class LoanApplication {
 	private double loanAmount;
 
 
-	public LoanApplication(int applicationNumber, int applicationid, double loanAmount) {
+	public LoanApplication(int applicationNumber, Customer applicationid, double loanAmount) {
 		super();
 		this.applicationNumber = applicationNumber;
 		this.customer = applicationid;
