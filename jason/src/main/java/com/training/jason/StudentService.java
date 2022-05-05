@@ -45,11 +45,15 @@ public class StudentService {
 	public boolean remove(int id) {
 	return this.studentList.removeIf(e->e.getRollNumber()==id);
 }
-	
-	public Student update(Student oldValue,Student newValue) {
-	int idxPos= this.studentList.indexOf(oldValue);
-	return this.studentList.set(idxPos, newValue);
-	
+
+	public Student update(int id,Student newValue) {
+		
+		int idxPos = this.studentList.indexOf(findById(id).get());
+			
+		 this.studentList.set(idxPos, newValue);
+			
+		 return newValue;
+		}
 }
 	
-}
+

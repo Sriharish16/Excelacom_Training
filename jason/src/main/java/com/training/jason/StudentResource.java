@@ -1,10 +1,10 @@
 package com.training.jason;
 
 import java.util.List;
-import java.util.Optional;
 
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response;
 
 @Path("students")
 public class StudentResource {
@@ -27,23 +27,29 @@ public class StudentResource {
 	@GET
 	@Path("/{rollNumber}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public Student findById(@PathParam("rollNumber")int id) {
+	public Response findById(@PathParam("rollNumber")int id) {
 		
-		return service.findById(id)
-				.orElseThrow(()->new RuntimeException("Id not found"));
+		try {
+			Student entity=service.findById(id).orElseThrow(()->new RuntimeException("Id not found"));
+		return Response.ok(entity).build();
+			}catch(RuntimeException e) {
+				e.printStackTrace();
+				return Response.ok("id not found").status(400).build();
+			}
+		
 		
 	}
 	
 
 	@POST
 	@Produces(MediaType.APPLICATION_JSON)
-	public Student add(Student student) {
+	public Response add(Student student) {
 		
 		boolean result=service.add(student);
 		if(result) {
-			return student;
+			return Response.ok(student).status(201).build();
 		}else {
-			return null;
+			return Response.status(400,"Not Created").build();
 		}
 		
 	}
@@ -51,8 +57,13 @@ public class StudentResource {
 	@DELETE
 	@Path("/{rollNumber}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public boolean remove(@PathParam("rollNumber")int id) {
-		return service.remove(id);
+	public Response remove(@PathParam("rollNumber")int id) {
+		boolean result=service.remove(id);
+		if(result) {
+			return Response.status(204,"One resource deleted").build();
+		}else {
+			return Response.status(400,"Not Deleted").build();
+		}
 	}
 	
 //	@POST
@@ -66,8 +77,14 @@ public class StudentResource {
 //	}
 	
 	
-	
-	
+	@PUT
+	@Path("/{rollNumber}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Student updateById(@PathParam("rollNumber")  int id , Student newStudent)
+	{
+		return service.update(id,newStudent);
+	}
+
 	
 	
 	
