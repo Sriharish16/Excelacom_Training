@@ -27,14 +27,17 @@ public class ProductClient {
 		}
 		
 		if(ch==2) {
-	
-			WebTarget findByTearget =target.path("/101").path();
-			Invocation.Builder builder=target.request(MediaType.APPLICATION_JSON);
+			WebTarget findByIdTarget = target.path("/srch/131");
 			
-			Response  findByResp=builder.get();
+			Invocation.Builder builder2 =
+					findByIdTarget.request(MediaType.APPLICATION_JSON);
 			
-		}
-		
+			Response findByResp = builder2.get();
+			
+			Product object2 = findByResp.readEntity(Product.class);
+			
+			System.out.println(object2);
+		}		
 		if(ch==4) {
 				
 	Product[] list=resp.readEntity(Product[].class);
