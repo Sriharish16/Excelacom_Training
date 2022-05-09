@@ -13,7 +13,7 @@ public class MyResource{
 	@Produces(MediaType.TEXT_PLAIN)
 	public String getMessage() {
 		
-		return "Hello Srihar;;;ish!";
+		return "Hello Sriharish!";
 	}
 		
 }
