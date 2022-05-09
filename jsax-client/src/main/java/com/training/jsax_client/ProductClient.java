@@ -15,6 +15,9 @@ public class ProductClient {
 		
 		
 		Client client= ClientBuilder.newClient();
+		
+		WebTarget target =client.target("http://localhost:8080/products");
+		Invocation.Builder builder= target.request(MediaType.APPLICATION_JSON);
 		Response resp=builder.get();
 
 		int ch=4;
@@ -55,3 +58,4 @@ for(Product eachProduct:list) {
 	}
 
 }
+	}}
