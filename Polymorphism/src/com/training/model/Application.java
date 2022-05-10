@@ -20,7 +20,7 @@ public class Application {
 		CrudRepository service = new BookService();
 		
 		List<Book>bookList=((BookService)service).getBookGrtThan(400);
-		bookList.forEach(action);
+		bookList.forEach(System.out::println);
 		
 		System.out.println("Is Added:"+service.add(java));
 		service.add(spring);
@@ -29,7 +29,7 @@ public class Application {
 		service.add(html);
 		
 		
-		List<Book> bookList=service.findAll();
+		List<Book> bookList1=service.findAll();
 		print(service.findAll());
 		
 		
