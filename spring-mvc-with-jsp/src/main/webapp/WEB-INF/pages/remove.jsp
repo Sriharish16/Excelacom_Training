@@ -8,15 +8,7 @@
 <title>Find By Id</title>
 </head>
 <body>
-${remove}
-
-<table>
-<tr>
-<td>${eachItem.productId}</td>
-<td>${eachItem.productName}</td>
-<td>${eachItem.price}</td>
-</tr>
-</table>
+${found}
 <p>removed one row </p>
 </body>
 </html>

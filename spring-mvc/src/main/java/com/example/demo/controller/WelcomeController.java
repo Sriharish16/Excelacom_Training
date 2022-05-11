@@ -22,6 +22,4 @@ public class WelcomeController {
 		return "<h6 style='text-align:center'>"
 				+ "designed by suba </h6>";
 	}
-	
-
 }
