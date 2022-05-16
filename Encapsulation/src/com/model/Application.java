@@ -1,7 +1,7 @@
 package com.model;
 
 import com.example.model.Student;
-import com.training.services;
+import com.example.*;
 
 public class Application {
 	public static void main(String[] args) {

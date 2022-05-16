@@ -22,9 +22,17 @@ public class Student {
 	public double getMarkScored() {
 		return markScored;
 	}
-	protected void setMarkScored(double markScored) {
+	public void setMarkScored(double markScored) {
+		
+		if(markScored<0) {
+			throw new RuntimeException(" Mark should be Positive Integer");
+		}else {
+			
+		}
 		this.markScored = markScored;
 	}
+
+
 	public String getBranch() {
 		return Branch;
 	}
@@ -32,13 +40,19 @@ public class Student {
 		this.Branch = branch;
 	
 	}
-	public Student(int rollNumber, String firstName, double markScored, String branch) {
+	public Student() {
 		super();
+		if(markScored<0) {
+			throw new RuntimeException("Marked Scored should be posittive");
+		}
+		else {
 		this.rollNumber = rollNumber;
 		this.firstName = firstName;
 		this.branch = branch;
 		this.markScored = markScored;
 	}
+	}
+	
 	public Student(int rollNumber, String firstName, String branch) {
 		this(rollNumber,firstName,99,branch);
 		this.rollNumber = rollNumber;
