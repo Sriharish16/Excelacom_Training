@@ -11,6 +11,5 @@ spring:
     hibernate:
       ddl-auto: update
       
-logging:
-  level:
-    '[org.hibernate.type.decriptor]': trace   
+  
+server.port : 8080
