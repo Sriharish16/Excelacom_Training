@@ -13,6 +13,10 @@ public class SpringSecurityApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringSecurityApplication.class, args);
+		
+		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+				System.out.println(encoder.encode("India"));
+				System.out.println(encoder.encode("Nepal"));
 	}
 	@Bean
 	BCryptPasswordEncoder encoder() {

@@ -11,6 +11,7 @@ public class StudentService {
 	public StudentService(List<Student> studentList) {
 		super();
 		this.studentList = studentList;
+		
 	}
 	
 	public StudentService() {
@@ -18,6 +19,7 @@ public class StudentService {
 		this.studentList= new ArrayList<Student>();
 		
 	}
+	
 	public boolean add(Student student) {
 	return this.studentList.add(student);
 	
@@ -40,6 +42,7 @@ public class StudentService {
 	return this.studentList.stream()
 			.filter(e->e.getRollNumber()==id)
 			.findFirst();
+	
 }
 
 	public boolean remove(int id) {
@@ -53,7 +56,9 @@ public class StudentService {
 		 this.studentList.set(idxPos, newValue);
 			
 		 return newValue;
+		 
 		}
+	
 }
 	
 
