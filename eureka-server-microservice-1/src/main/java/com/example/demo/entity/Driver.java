@@ -11,14 +11,12 @@ import lombok.NoArgsConstructor;
 
 @Data
 @Entity
-@Table(name="sri_driver")
+@Table(name="sri_driver1")
 @AllArgsConstructor
 @NoArgsConstructor
 public class Driver {
 	
-	
-	
-	
+
 	@Id
 	@Column(name="driver_id")
 	private int id;

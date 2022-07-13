@@ -14,8 +14,6 @@ spring:
       ddl-auto: update
       
 
-
-
 server:
   port: 7070
   

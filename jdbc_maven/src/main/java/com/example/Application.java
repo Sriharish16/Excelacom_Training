@@ -29,13 +29,8 @@ public class Application {
 		// TODO Auto-generated method stub
 		product();
 	}
-	
 
 }
-
-
-
-
 
 //try {
 //	Connection con;

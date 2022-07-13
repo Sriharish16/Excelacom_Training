@@ -13,11 +13,12 @@ public class Converter {
 		return (farenTemp-32)*5/9;
 	}
 	public double convert(double amt, int frm) {
-		double response=amt*100;
+		double response = amt*100;
 		
-		if(frm>1) {
-			response=amt*120;
+		if(frm >1) {
+			response = amt*120;
 				}
 		return response;
 	}
+	
 }

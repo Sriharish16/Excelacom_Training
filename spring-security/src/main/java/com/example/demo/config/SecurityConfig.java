@@ -23,16 +23,16 @@ DataSource dataSource;
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		
-		String sql ="SELECT u.username,a.authority from authorities a,sri_users u where u.username=?"+"AND u.username=a.username";
-//		auth.inMemoryAuthentication()
-//			.withUser("India")
-//				.password(encoder.encode("India"))
-//					.roles("ADMIN").and()
-//						.withUser("Nepal")
-//							.password(encoder.encode("Nepal"))
-//								.roles("GUEST");
-		auth.jdbcAuthentication().dataSource(dataSource).usersByUsernameQuery("select username,password,enabled from sri_users where username=?")
-	      .authoritiesByUsernameQuery(sql).passwordEncoder(encoder);
+		String sql ="SELECT u.username,a.authority from authorities1 a,sri_users1 u where u.username=?"+"AND u.username=a.username";
+		auth.inMemoryAuthentication()
+			.withUser("India")
+				.password(encoder.encode("India"))
+					.roles("ADMIN").and()
+						.withUser("Nepal")
+							.password(encoder.encode("Nepal"))
+								.roles("GUEST");
+//		auth.jdbcAuthentication().dataSource(dataSource).usersByUsernameQuery("select username,password,enabled from sri_users1 where username=?")
+//	      .authoritiesByUsernameQuery(sql).passwordEncoder(encoder);
 	}
 
 	

@@ -9,18 +9,20 @@ public class Application {
 //		System.out.println(args[1]);
 //		System.out.println(args[2]);
 		CurrencyConverter conv=new CurrencyConverter();
-		double dblAmount=Double.parseDouble(args[0]);
+		double dblAmount=Double.parseDouble(args[0]);     
 		System.out.println(conv.inrTousd(dblAmount));
 		
 		double inrValue=Double.parseDouble(args[1]);
 		System.out.println(conv.inrToeuro(inrValue));
 		
 		
-}
+
 	double salary=42500.0;
 	int inSal=(int) salary;
+	System.out.println(inSal);
 	int age=42;
 	String strAge=Integer.toString(age);
 	int intage=Integer.valueOf(strAge);//converting to primitive type
-	
+	System.out.println(strAge);
 	}
+}

@@ -66,12 +66,12 @@ public class ProductService {
 			
 			pstmt.setInt(1, id);
 			
-			ResultSet rs =pstmt.executeQuery();
+			ResultSet rs =  pstmt.executeQuery();
 			
 		if(rs.next()) {
-			int productId=rs.getInt("product_id");
-			String productName =rs.getString("product_name");
-			double price =rs.getDouble("price");
+			int productId = rs.getInt("product_id");
+			String productName = rs.getString("product_name");
+			double price = rs.getDouble("price");
 			
 			Product prod = new Product(productId,productName,price);
 			obj=Optional.of(prod);
@@ -110,7 +110,7 @@ public class ProductService {
 		
 		String sql= "select*from sri_product";
 		
-		try(PreparedStatement pstmt=con.prepareStatement(sql)){
+		try(PreparedStatement pstmt = con.prepareStatement(sql)){
 			
 			ResultSet rs=pstmt.executeQuery();
 			
@@ -155,7 +155,7 @@ public class ProductService {
 			
 			pstmt.setInt(1, prd2.getProductId());
 			pstmt.setString(2,prd2.getProductName());
-			pstmt.setDouble(3,prd1.getPrice());
+			pstmt.setDouble(3,prd2.getPrice());
 			
 			int rowAdded1= pstmt.executeUpdate();
 			

@@ -12,14 +12,13 @@ public class HashSetApplication {
 		Student magesh=new Student(103,"Magesh",88);
 		Student chinnaMagesh = new Student(103,"Magesh",88);
 		
-		
 		Set<Student> set= new HashSet<>();
 		
 		set.add(magesh);
 		set.add(chinnaMagesh);
 		set.add(shyam);
 		set.add(ram);
-		
+		                 
 		System.out.println(set);
 		
 		System.out.println(set.size());

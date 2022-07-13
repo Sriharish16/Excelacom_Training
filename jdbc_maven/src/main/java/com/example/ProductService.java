@@ -21,9 +21,9 @@ public class ProductService {
 		try(PreparedStatement pstmt = con.prepareStatement(sql)){
 			pstmt.setDouble(1, newPrice);
 			pstmt.setString(2, name);
+		
 			
-			
-			rowsUpdated=pstmt.executeUpdate(); 
+			rowsUpdated=pstmt.executeUpdate();
 			
 		} catch(SQLException e) {
 			e.printStackTrace();
@@ -77,9 +77,7 @@ public class ProductService {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
-		
+
 		return obj;
 	
 	}
@@ -132,13 +130,8 @@ public class ProductService {
 		
 		return productList;
 		
-				
+		
 	}
 	
 	
-	
-	
-	
-	
-
 }

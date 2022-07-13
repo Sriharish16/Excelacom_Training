@@ -33,9 +33,9 @@ public class MyApplication {
 			
 			
 			
-			BankAccount account=new BankAccount(accountNumber, accountHolderName,  balance, accountType);
-					list[idx]=account;
-					System.out.println("Enter o otr 1 to continue");
+	BankAccount account=new BankAccount(accountNumber, accountHolderName,  balance, accountType);
+				list[idx]=account;
+					System.out.println("Enter o or 1 to continue");
 					
 					choice=sc.nextInt();
 			

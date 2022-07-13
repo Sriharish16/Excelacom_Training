@@ -24,7 +24,6 @@ public class ConfigClientApplication {
 		DoctorRepository repo =ctx.getBean(DoctorRepository.class);
 		repo.findAll().forEach(System.out::println);
 		
-	
 		
 	}
 
