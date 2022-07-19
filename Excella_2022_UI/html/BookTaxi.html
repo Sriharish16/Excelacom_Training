@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Taxi</title>
+    <style>
+    h1{ 
+        border: 2px solid rgb(0, 0, 0);
+        border-radius: 30px 40px;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif
+        }
+
+    .center {
+    text-align: center;
+    }</style>
+
+    
+</head>
+<body background="images\background3.jpg">
+    <header>
+            <form action="index.html" method="get">
+    <h1>Sriharish Taxi Booking</h1>
+    
+    <div class="center">
+        <label for="customerName">Customer Name</label>
+        <input type="text" name="customerName" id="customerName" placeholder= "Enter Customer Name" required>
+    </div><br>
+
+    <div class="center">
+
+        <label for="requestedDate&Time">Requested Date & Time:</label>
+        <input type="datetime-local" id="requestedDate&Time" name="requestedDate&Time">
+    </div><br>
+
+    <div class="center">
+        <label for="pickupPoint">Pickup Point</label>
+        <input type="text" name="pickupPoint" id="pickupPoint">
+    </div><br>
+
+    <div class="center">
+        <label for="dropPoint">DropPoint</label>
+        <input type="text" name="dropPoint" id="dropPoint">
+    </div><br>
+
+    <div class="center">
+        <label for="customerMobileNumber">Customer MobileNumber</label>
+        <input type="tel" name="customerMobileNumber" id="customerMobileNumber"  placeholder= "Enter Mobile Number" required>
+    </div><br>
+
+    <div class="center">
+        <label for="vehicleType">Vehicle Type</label>
+        <select name="vehicleType" id="vehicleType">
+            <option value="CAR">Car</option>
+            <option value="TEM">Tempo</option>
+            <option value="TVL">Traveller</option>
+            <option value="BUS">Bus</option><br>
+        </select>
+        </div><br>
+
+        <div class="center">
+            
+            <label for="specialInstruction">Special Instruction</label><br>
+        <div class="center">
+            <textarea rows="5" cols="50" name="comment" form="submit">
+                Enter text here...</textarea>
+                </div>
+        </div><br>
+
+    
+        <div class="center">
+            <input type="reset" value="Clear">
+            <input type="submit" value="Submit">
+        </div>
+
+        <center>
+            <!-- The image has scrolling behavior to left -->
+            <marquee  behavior="scroll" direction="left">        
+                  <img src="images\24x7.jpg"
+        
+            </marquee>  
+              
+           <!-- The image has scrolling behavior to the upper direction. -->
+           <marquee  behavior="scroll" direction="up">         
+                  <img src= "images\24x7.jpg"
+    
+            </marquee>  
+        </center>
+
+        </form>
+    
+ 
+    </header>
+
+</body>
+</html>
